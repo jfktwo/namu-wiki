@@ -1,0 +1,109 @@
+site_name: 나무 장터 Wiki
+site_description: 수목 수요자와 공급자를 연결하는 나무 장터 프로젝트 문서
+site_url: https://jfktwo.github.io/namu-wiki/
+repo_url: https://github.com/jfktwo/namu-wiki
+repo_name: jfktwo/namu-wiki
+
+docs_dir: docs
+site_dir: site
+use_directory_urls: true
+
+theme:
+  name: material
+  language: ko
+  logo: assets/logo.svg
+  favicon: assets/favicon.svg
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      accent: lime
+      toggle:
+        icon: material/weather-night
+        name: 어두운 화면으로 전환
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      accent: lime
+      toggle:
+        icon: material/weather-sunny
+        name: 밝은 화면으로 전환
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search:
+      lang:
+        - ko
+        - en
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - 홈: index.md
+  - 사용자 가이드:
+      - 개요: userguide/index.md
+  - 프로젝트 기초:
+      - 구조잡기: start/01.구조잡기.md
+      - 소프트웨어 구조: start/02.소프트웨어 구조.md
+      - 개발환경구성: start/03.개발환경구성.md
+      - 요구사항 분석: start/04.요구사항 분석.md
+      - 디자인 시안: start/05.디자인 시안.md
+  - 기능:
+      - 발전 체크리스트: feature/readme.md
+      - 매칭 점수: feature/04.매칭점수.md
+  - 배포:
+      - 패키징/배포 가이드: deploy/packaging-guide.md
+      - Render + Vercel: deploy/render-vercel.md
+  - 디자인:
+      - 디자인 가이드: design/design-guide.md
+      - 디자인 감사:
+          - 개요: design/audit/README.md
+          - 캡처 인벤토리: design/audit/capture-inventory.md
+          - 현재 디자인 감사: design/audit/current-design-audit.md
+          - 구성요소 개선 계획: design/audit/component-improvement-plan.md
+          - 개편 실행 계획: design/audit/redesign-execution-plan.md
+  - 설정:
+      - 기본 설정: setting/normal.md
+      - DB 마이그레이션: setting/db-migration.md
+  - 테스트:
+      - 목차: test/readme.md
+      - 기본사항: test/01.기본사항.md
+      - 테스트 내용: test/02.테스트내용.md
+  - 운영 아이디어:
+      - 과금 아이디어: business/monetization-ideas.md
+      - 시드 데이터 가이드: seed-data-guide.md
+      - 추후 작업: future/readme.md
+      - 동영상 업로드: future/01.video.md
+  - 코드 리뷰:
+      - 개요: codereview/README.md
+      - 백엔드 개요: codereview/backend/overview.md
+      - 프론트엔드 개요: codereview/frontend/overview.md
+      - 인증: codereview/frontend/auth.md
+      - 라우팅/레이아웃: codereview/frontend/routing-layout.md
+      - 수요: codereview/frontend/demands.md
+      - 재고: codereview/frontend/stocks.md
+      - 매칭/문의: codereview/frontend/matches-inquiries.md
+      - 관리자 공통: codereview/frontend/admin-shared.md
+  - 워크플로우: workflow.md
