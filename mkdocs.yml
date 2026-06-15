@@ -76,6 +76,7 @@ nav:
       - 거래 신뢰도 시스템: feature/05.신뢰도시스템.md
       - 매칭 성능 최적화: feature/06.매칭성능최적화.md
       - 거래 흐름 및 평가: feature/07.거래흐름.md
+      - 수요·재고 UI 명세: feature/08.수요재고UI.md
   - 배포:
       - 패키징/배포 가이드: deploy/packaging-guide.md
       - Render + Vercel: deploy/render-vercel.md
